@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Paper CO</title>
+<!-- https://flask.palletsprojects.com/en/1.1.x/quickstart/#rendering-templates -->
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <script src="jquery-3.5.1.min.js"></script>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">PaperCO</a>
+      <ul class="right hide-on-med-and-down">
+        
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Manutenção Preditiva da Máquina</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Digite o valor atual das variáveis
+        <br>
+        </h5>
+      </div>
+
+     <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      
+      <div class="row">
+        
+        <div class="input-field col s6">
+            <label for="var_1"><b>Tag4</b></label>
+            <br>
+
+          <input placeholder="MIN:1382.25  MAX:1441.49" name="Tag4" id="var_1" type="text" class="validate">
+
+
+        </div>
+        
+        <div class="input-field col s6">
+          <label for="var_2"><b>Tag11 </b></label>
+            <br>
+           <input id="var_2" name="Tag11" placeholder="MIN:46.85  MAX:48.53"  type="text" class="validate"> 
+
+
+        </div>
+
+        <div class="input-field col s6">
+            <label for="var_3"><b>Tag12</b></label>
+            <br>
+           <input id="var_3" name="Tag12" placeholder="MIN:518.69  MAX:523.38" type="text" class="validate">
+
+  
+        </div>
+
+        <div class="input-field col s6">
+            <label for="var_4"><b>Tag15</b></label>
+            <br>
+          <input id="var_4" name="Tag15" placeholder="MIN:8.3249  MAX:8.5848" type="text" class="validate"> 
+
+
+        </div>
+        
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Verificar</button>
+      </div>
+    </form>
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <br><h2>{{pred}} {{bhai}}</h2><br>
+      
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./static/js/materialize.js"></script>
+  <script src="./static/js/jquery-3.5.1.min.js"></script>
+
+  </body>
+</html>
+
