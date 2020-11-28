@@ -5,7 +5,7 @@ import numpy as np
 import os
 import lightgbm as lgb
 
-from pred_scaler import pred_scaler
+from prep_scaler import prep_scaler
 
 ## Carregar  o modeelo na memoria para toda vez que inciar a API o modelo carregar, antes da solcitacao
 # carregar o modelo
