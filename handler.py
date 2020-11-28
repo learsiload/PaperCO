@@ -28,7 +28,7 @@ def predict():
 
     #----------SCALER------------------------
     pipeline = prep_scaler()
-    lista = pipeline.data_preparacao(data_preparacao)
+    lista = pipeline.data_preparacao(lista)
 
 
     df = pd.DataFrame(lista)
