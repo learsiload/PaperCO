@@ -3,6 +3,9 @@ from flask import Flask, request, render_template, url_for, redirect
 import pickle
 import numpy as np
 import os
+import lightgbm as lgb
+
+from pred_scaler import pred_scaler
 
 ## Carregar  o modeelo na memoria para toda vez que inciar a API o modelo carregar, antes da solcitacao
 # carregar o modelo
@@ -22,6 +25,12 @@ def predict():
 #--------------------------------------------
 # Coleta de dados da pagina
     lista = [x for x in request.form.values()]
+
+    #----------SCALER------------------------
+    pipeline = prep_scaler()
+    lista = pipeline.data_preparacao(data_preparacao)
+
+
     df = pd.DataFrame(lista)
 #---------------------------------------------
     pred_pagina_cl = model_cl.predict(df.T)
