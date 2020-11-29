@@ -24,7 +24,7 @@ def predict():
 
 #--------------------------------------------
 # Coleta de dados da pagina
-    lista = [x for x in request.form.values()]
+    lista = [float(x) for x in request.form.values()]
 
     #----------SCALER------------------------
     # transpose da lista
