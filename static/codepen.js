@@ -22,13 +22,23 @@ function showSliderValue2() {
   tag4_out.style.left = (bulletPosition * 578) + "px";
 }
 
+var tag7_in = document.getElementById("tag7_in");
+var tag7_out = document.getElementById("tag7_out");
+
+tag7_in.addEventListener("input", showSliderValue3, false);
+
+function showSliderValue3() {
+  tag7_out.innerHTML = tag7_in.value;
+  var bulletPosition = (tag7_in.value /tag7_in.max);
+  tag7_out.style.left = (bulletPosition * 578) + "px";
+}
 
 var tag9_in = document.getElementById("tag9_in");
 var tag9_out = document.getElementById("tag9_out");
 
-tag9_in.addEventListener("input", showSliderValue3, false);
+tag9_in.addEventListener("input", showSliderValue4, false);
 
-function showSliderValue3() {
+function showSliderValue4() {
   tag9_out.innerHTML = tag9_in.value;
   var bulletPosition = (tag9_in.value /tag9_in.max);
   tag9_out.style.left = (bulletPosition * 578) + "px";
@@ -37,9 +47,9 @@ function showSliderValue3() {
 var tag11_in = document.getElementById("tag11_in");
 var tag11_out = document.getElementById("tag11_out");
 
-tag11_in.addEventListener("input", showSliderValue4, false);
+tag11_in.addEventListener("input", showSliderValue5, false);
 
-function showSliderValue4() {
+function showSliderValue5() {
   tag11_out.innerHTML = tag11_in.value;
   var bulletPosition = (tag11_in.value /tag11_in.max);
   tag11_out.style.left = (bulletPosition * 578) + "px";
@@ -48,9 +58,9 @@ function showSliderValue4() {
 var tag12_in = document.getElementById("tag12_in");
 var tag12_out = document.getElementById("tag12_out");
 
-tag12_in.addEventListener("input", showSliderValue5, false);
+tag12_in.addEventListener("input", showSliderValue6, false);
 
-function showSliderValue5() {
+function showSliderValue6() {
   tag12_out.innerHTML = tag12_in.value;
   var bulletPosition = (tag12_in.value /tag12_in.max);
   tag12_out.style.left = (bulletPosition * 578) + "px";
@@ -59,9 +69,9 @@ function showSliderValue5() {
 var tag14_in = document.getElementById("tag14_in");
 var tag14_out = document.getElementById("tag14_out");
 
-tag14_in.addEventListener("input", showSliderValue6, false);
+tag14_in.addEventListener("input", showSliderValue7, false);
 
-function showSliderValue6() {
+function showSliderValue7() {
   tag14_out.innerHTML = tag14_in.value;
   var bulletPosition = (tag14_in.value /tag14_in.max);
   tag14_out.style.left = (bulletPosition * 578) + "px";
@@ -70,24 +80,14 @@ function showSliderValue6() {
 var tag15_in = document.getElementById("tag15_in");
 var tag15_out = document.getElementById("tag15_out");
 
-tag15_in.addEventListener("input", showSliderValue7, false);
+tag15_in.addEventListener("input", showSliderValue8, false);
 
-function showSliderValue7() {
+function showSliderValue8() {
   tag15_out.innerHTML = tag15_in.value;
   var bulletPosition = (tag15_in.value /tag15_in.max);
   tag15_out.style.left = (bulletPosition * 578) + "px";
 }
 
-var tag17_in = document.getElementById("tag17_in");
-var tag17_out = document.getElementById("tag17_out");
-
-tag17_in.addEventListener("input", showSliderValue8, false);
-
-function showSliderValue8() {
-  tag17_out.innerHTML = tag17_in.value;
-  var bulletPosition = (tag17_in.value /tag17_in.max);
-  tag17_out.style.left = (bulletPosition * 578) + "px";
-}
 
 var tag20_in = document.getElementById("tag20_in");
 var tag20_out = document.getElementById("tag20_out");
