@@ -64,7 +64,7 @@ def predict():
         pred='Ops! Máquina precisando de manutenção. Dentro dos últimos 20 Ciclos se espera uma parada.'
         bhai='Próxima quebra será daqui {}'.format(pred_pagina_re) +' dias. Acione a equipe de manutenção.'
     else:
-        pred='Muito bem, a máquina e suas variáveis estão cooperando para um bom funciomanento.' 
+        pred='Muito bem, a máquina e suas variáveis estão cooperando para um bom funcionamento.' 
         bhai='O Sistema de previsão diz que ainda restam {}'.format(pred_pagina_re) + ' dias.'
     return render_template('paperco.html',predx = pred_pagina_cl, bhaix = pred_pagina_re, pred = pred , bhai = bhai ) 
 
